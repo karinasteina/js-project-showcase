@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Car Racing</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        <h1 id="gameName">Car Racing Game</h1>
+        
+        <div id="startScreen" style="padding-left: 40px;">
+
+            <div id="row1">
+
+            </div>
+
+            <div id="row2">
+                <div>
+                    <h2>Choose Your Car:</h2>
+                    <input id="playerCar1" type="radio" name="playerCar" value="fiat">
+                    <label for="playerCar1">Fiat 126</label>
+                    <br>
+                    <input id="playerCar2" type="radio" name="playerCar" value="bus">
+                    <label for="playerCar2">Double-Decker Bus</label>
+                    <br>
+                    <input id="playerCar3" type="radio" name="playerCar" value="nissan">
+                    <label for="playerCar3">Nissan Silvia S13</label>
+                </div>
+                <div>
+                    <h2>Choose Opponent Car:</h2>
+                    <input id="botCar1" type="radio" name="botCar" value="formula">
+                    <label for="botCar1">Formula 1</label>
+                    <br>
+                    <input id="botCar2" type="radio" name="botCar" value="truck">
+                    <label for="botCar2">Monster Truck</label>
+                    <br>
+                    <input id="botCar3" type="radio" name="botCar" value="cart">
+                    <label for="botCar3">Shopping Cart</label>
+                </div>
+            </div>
+
+            <div id="row3">
+                <button id="startButton">Start</button>
+            </div>
+
+        </div>
+
+        <img src="">
+
+        <div id="statScreen">
+
+            <div id="statRow1">Player: 0 km/h</div>
+
+            <div id="statRow2">Enemy: 0 km/h</div>
+
+            <div id="statRow3">Clicks: 0</div>
+
+        </div>
+
+        <div id="gameScreen">
+
+            <div id="road">
+                <div id="playerCarBox"><img src="fiat126-2.png"></div>
+            </div>
+
+            <div id="road">
+                <div id="enemyCarBox"><img src="fiat126.png"></div>
+            </div>
+
+            <div>
+                <img id="restartEngineer" src="engineer.png">
+                <button id="startRaceButton">Click Here Start Race</button>
+                <button id="restartButton">Restart</button>
+                <button id="speedButton">Click Here To Speed Up</button>
+            </div>
+
+        </div>
+
+        <div id="endScreen">
+
+            <div id="endRow0">You Won/You Lost!</div>
+
+            <div id="endRow1">Player Top Speed: 0 km/h</div>
+
+            <div id="endRow2">Enemy Top Speed: 0 km/h</div>
+
+            <div id="endRow3">Clicks Made: 0</div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

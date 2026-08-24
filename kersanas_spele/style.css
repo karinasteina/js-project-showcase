@@ -1,0 +1,12 @@
+body{
+    background-color: #FCE8F1;
+}
+h2{
+    font-family: monospace;
+}
+p{
+    font-family: monospace;
+    font-weight: bolder;
+    padding-right: 1cm;
+    font-size: 15pt;
+}

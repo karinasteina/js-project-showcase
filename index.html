@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Pulciņa Projektu Galerija</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0f19;
+    --panel: #131a2a;
+    --accent: #00e5c7;
+    --accent2: #7c5cff;
+    --text: #e8ecf5;
+    --muted: #8b93a7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; font-family: 'JetBrains Mono', monospace;
+    color: var(--text);
+    background:
+      radial-gradient(circle at 15% 10%, rgba(124,92,255,0.18), transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(0,229,199,0.14), transparent 45%),
+      var(--bg);
+  }
+  header { text-align: center; padding: 56px 20px 28px; }
+  header h1 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 10px;
+    letter-spacing: -0.02em;
+  }
+  header h1 .bracket { color: var(--accent); }
+  .subtitle { max-width: 540px; margin: 0 auto; color: var(--muted); font-size: 0.95rem; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 26px;
+    max-width: 900px; margin: 0 auto; padding: 24px 32px 70px;
+  }
+  .card {
+    background: var(--panel); border-radius: 14px; overflow: hidden;
+    text-decoration: none; color: inherit; display: flex; flex-direction: column;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    position: relative;
+  }
+  .card::before {
+    content: ""; position: absolute; inset: 0; border-radius: 14px; padding: 1px;
+    background: linear-gradient(135deg, var(--accent2), transparent 40%);
+    opacity: 0; transition: opacity .2s ease;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(0,0,0,0.35); }
+  .card:hover::before { opacity: 1; }
+  .card-image {
+    height: 150px; background: linear-gradient(135deg, #1b2338, #10162a);
+    display: flex; align-items: center; justify-content: center; font-size: 2.6rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .card-image img { max-width: 65%; max-height: 65%; object-fit: contain; filter: drop-shadow(0 6px 14px rgba(0,0,0,0.4)); }
+  .card-body { padding: 18px 20px 22px; }
+  .card-body h2 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; margin: 0 0 8px;
+    color: var(--text);
+  }
+  .desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin: 0 0 16px; }
+  .play-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: transparent; color: var(--accent);
+    font-weight: 600; padding: 7px 14px; border-radius: 999px; font-size: 0.78rem;
+    border: 1px solid var(--accent);
+  }
+  footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="bracket">&lt;</span>JavaScript Pulciņš<span class="bracket">/&gt;</span></h1>
+  <p class="subtitle">Skolēnu izveidotās spēles - spied uz kartītes, lai palaistu.</p>
+</header>
+<main class="grid">
+  <a class="card" href="auto_sacikstes/index.html">
+    <div class="card-image"><img src="auto_sacikstes/fiat126.png" alt=""></div>
+    <div class="card-body">
+      <h2>Auto Sacīkstes</h2>
+      <p class="desc">Izvēlies auto, iedarbini to un tiec līdz 100 km/h pirmais.</p>
+      <span class="play-pill">▶ palaist</span>
+    </div>
+  </a>
+  <a class="card" href="kersanas_spele/index.html">
+    <div class="card-image">🟨</div>
+    <div class="card-body">
+      <h2>Ķeršanas Spēle</h2>
+      <p class="desc">Vāc zelta kvadrātus, krāj punktus - bet nepieskaries malai.</p>
+      <span class="play-pill">▶ palaist</span>
+    </div>
+  </a>
+  <a class="card" href="vardu_minesana/index.html">
+    <div class="card-image">🔤</div>
+    <div class="card-body">
+      <h2>Vārdu Minēšana</h2>
+      <p class="desc">Min burtus, lai atklātu paslēpto vārdu.</p>
+      <span class="play-pill">▶ palaist</span>
+    </div>
+  </a>
+</main>
+<footer>Pulciņu gadatirgus 2026</footer>
+</body>
+</html>
